@@ -1,0 +1,43 @@
+// create a variable to hold your NFT's 
+const nftcollection=[] 
+ 
+// this function will take in some values as parameters, create an 
+// NFT object using the parameters passed to it for its metadata,  
+// and store it in the variable above. 
+function createNFT (name,race,class_type,weapon) { 
+    const nft={ 
+        "name":name, 
+        "race":race, 
+         "class_type":class_type, 
+         "weapon":weapon 
+ 
+    } 
+    nftcollection.push(nft); 
+    console.log("Minted: "+ name); 
+ 
+} 
+ 
+// create a "loop" that will go through an "array" of NFT's 
+// and print their metadata with console.log() 
+function displayNFTs () { 
+ for(let i=0;i<nftcollection.length;i++){ 
+    console.log("\nID: \t\t"+ (i+1)); 
+    console.log("Name: \t\t" + nftcollection[i].name); 
+    console.log("Race: \t\t" +nftcollection[i].race); 
+    console.log("ClassType:\t" + nftcollection[i].class_type); 
+    console.log("Weapon: \t" + nftcollection[i].weapon); 
+ } 
+} 
+ 
+// print the total number of NFTs we have minted to the console 
+function gettotalNFTs() { 
+ console.log("\n"+nftcollection.length); 
+} 
+ 
+// call your functions below this line 
+createNFT("Arragron","Human","Ranger","Sword"); 
+createNFT("Legolas","Elf","Archar","Bow"); 
+createNFT("Giml","Dwarf","Warrior","Axe"); 
+createNFT("Gandalf","Wizard","Maze","Staff"); 
+displayNFTs(); 
+gettotalNFTs();
